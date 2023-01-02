@@ -9,23 +9,44 @@
 /* Begin PBXBuildFile section */
 		9C2C167A296294D200E397D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C1679296294D200E397D7 /* AppDelegate.swift */; };
 		9C2C167C296294D200E397D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C167B296294D200E397D7 /* SceneDelegate.swift */; };
-		9C2C167E296294D200E397D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C167D296294D200E397D7 /* ViewController.swift */; };
-		9C2C1681296294D200E397D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2C167F296294D200E397D7 /* Main.storyboard */; };
+		9C2C167E296294D200E397D7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C167D296294D200E397D7 /* AuthViewController.swift */; };
 		9C2C1684296294D200E397D7 /* test_auth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C1682296294D200E397D7 /* test_auth.xcdatamodeld */; };
 		9C2C1686296294D200E397D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C2C1685296294D200E397D7 /* Assets.xcassets */; };
 		9C2C1689296294D200E397D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2C1687296294D200E397D7 /* LaunchScreen.storyboard */; };
+		9C2C16982962969F00E397D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16972962969F00E397D7 /* LoginViewController.swift */; };
+		9C2C169A296296A900E397D7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C1699296296A900E397D7 /* SignUpViewController.swift */; };
+		9C2C169D296296F700E397D7 /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C169C296296F700E397D7 /* AuthNavigationDelegate.swift */; };
+		9C2C16A02962972B00E397D7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C2C169F2962972B00E397D7 /* SnapKit */; };
+		9C2C16A32962989A00E397D7 /* UIButton + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16A22962989A00E397D7 /* UIButton + Ext.swift */; };
+		9C2C16A5296298BA00E397D7 /* UIFont + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16A4296298BA00E397D7 /* UIFont + Ext.swift */; };
+		9C2C16A7296298D300E397D7 /* UILabel + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16A6296298D300E397D7 /* UILabel + Ext.swift */; };
+		9C2C16A9296298EE00E397D7 /* UIStackView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16A8296298EE00E397D7 /* UIStackView + Ext.swift */; };
+		9C2C16AC2962992500E397D7 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16AB2962992500E397D7 /* OneLineTextField.swift */; };
+		9C2C16AE2962994B00E397D7 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16AD2962994B00E397D7 /* UIColor + Ext.swift */; };
+		9C2C16B02962999400E397D7 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16AF2962999400E397D7 /* ButtonView.swift */; };
+		9C2C16B2296299C900E397D7 /* UIImageView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16B1296299C900E397D7 /* UIImageView + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9C2C1676296294D200E397D7 /* test_auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_auth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C2C1679296294D200E397D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C2C167B296294D200E397D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C2C167D296294D200E397D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9C2C1680296294D200E397D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C2C167D296294D200E397D7 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		9C2C1683296294D200E397D7 /* test_auth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = test_auth.xcdatamodel; sourceTree = "<group>"; };
 		9C2C1685296294D200E397D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C2C1688296294D200E397D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C2C168A296294D200E397D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C2C16972962969F00E397D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9C2C1699296296A900E397D7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9C2C169C296296F700E397D7 /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
+		9C2C16A22962989A00E397D7 /* UIButton + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Ext.swift"; sourceTree = "<group>"; };
+		9C2C16A4296298BA00E397D7 /* UIFont + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Ext.swift"; sourceTree = "<group>"; };
+		9C2C16A6296298D300E397D7 /* UILabel + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Ext.swift"; sourceTree = "<group>"; };
+		9C2C16A8296298EE00E397D7 /* UIStackView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Ext.swift"; sourceTree = "<group>"; };
+		9C2C16AB2962992500E397D7 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		9C2C16AD2962994B00E397D7 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
+		9C2C16AF2962999400E397D7 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		9C2C16B1296299C900E397D7 /* UIImageView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2C16A02962972B00E397D7 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +80,98 @@
 		9C2C1678296294D200E397D7 /* test_auth */ = {
 			isa = PBXGroup;
 			children = (
-				9C2C1679296294D200E397D7 /* AppDelegate.swift */,
-				9C2C167B296294D200E397D7 /* SceneDelegate.swift */,
-				9C2C167D296294D200E397D7 /* ViewController.swift */,
-				9C2C167F296294D200E397D7 /* Main.storyboard */,
-				9C2C1685296294D200E397D7 /* Assets.xcassets */,
-				9C2C1687296294D200E397D7 /* LaunchScreen.storyboard */,
-				9C2C168A296294D200E397D7 /* Info.plist */,
-				9C2C1682296294D200E397D7 /* test_auth.xcdatamodeld */,
+				9C2C1691296295B500E397D7 /* Resources */,
+				9C2C1690296295AF00E397D7 /* Sources */,
 			);
 			path = test_auth;
+			sourceTree = "<group>";
+		};
+		9C2C1690296295AF00E397D7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C16AA2962991500E397D7 /* CustomView */,
+				9C2C16A12962988A00E397D7 /* Extensions */,
+				9C2C169B296296E900E397D7 /* Protocols */,
+				9C2C1696296295F200E397D7 /* Model */,
+				9C2C1694296295E300E397D7 /* Controllers */,
+				9C2C1693296295D400E397D7 /* Storyboard */,
+				9C2C1692296295BC00E397D7 /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9C2C1691296295B500E397D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C168A296294D200E397D7 /* Info.plist */,
+				9C2C1685296294D200E397D7 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9C2C1692296295BC00E397D7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C1679296294D200E397D7 /* AppDelegate.swift */,
+				9C2C167B296294D200E397D7 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9C2C1693296295D400E397D7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C1687296294D200E397D7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9C2C1694296295E300E397D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C167D296294D200E397D7 /* AuthViewController.swift */,
+				9C2C16972962969F00E397D7 /* LoginViewController.swift */,
+				9C2C1699296296A900E397D7 /* SignUpViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9C2C1696296295F200E397D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C1682296294D200E397D7 /* test_auth.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C2C169B296296E900E397D7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C169C296296F700E397D7 /* AuthNavigationDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9C2C16A12962988A00E397D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C16A22962989A00E397D7 /* UIButton + Ext.swift */,
+				9C2C16A4296298BA00E397D7 /* UIFont + Ext.swift */,
+				9C2C16A6296298D300E397D7 /* UILabel + Ext.swift */,
+				9C2C16A8296298EE00E397D7 /* UIStackView + Ext.swift */,
+				9C2C16AD2962994B00E397D7 /* UIColor + Ext.swift */,
+				9C2C16B1296299C900E397D7 /* UIImageView + Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9C2C16AA2962991500E397D7 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C16AB2962992500E397D7 /* OneLineTextField.swift */,
+				9C2C16AF2962999400E397D7 /* ButtonView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +190,9 @@
 			dependencies = (
 			);
 			name = test_auth;
+			packageProductDependencies = (
+				9C2C169F2962972B00E397D7 /* SnapKit */,
+			);
 			productName = test_auth;
 			productReference = 9C2C1676296294D200E397D7 /* test_auth.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +221,9 @@
 				Base,
 			);
 			mainGroup = 9C2C166D296294D200E397D7;
+			packageReferences = (
+				9C2C169E2962972B00E397D7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 9C2C1677296294D200E397D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,7 +240,6 @@
 			files = (
 				9C2C1689296294D200E397D7 /* LaunchScreen.storyboard in Resources */,
 				9C2C1686296294D200E397D7 /* Assets.xcassets in Resources */,
-				9C2C1681296294D200E397D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +250,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C2C167E296294D200E397D7 /* ViewController.swift in Sources */,
+				9C2C16AC2962992500E397D7 /* OneLineTextField.swift in Sources */,
+				9C2C169A296296A900E397D7 /* SignUpViewController.swift in Sources */,
+				9C2C167E296294D200E397D7 /* AuthViewController.swift in Sources */,
 				9C2C167A296294D200E397D7 /* AppDelegate.swift in Sources */,
+				9C2C16AE2962994B00E397D7 /* UIColor + Ext.swift in Sources */,
+				9C2C169D296296F700E397D7 /* AuthNavigationDelegate.swift in Sources */,
+				9C2C16B02962999400E397D7 /* ButtonView.swift in Sources */,
+				9C2C16B2296299C900E397D7 /* UIImageView + Ext.swift in Sources */,
+				9C2C16A9296298EE00E397D7 /* UIStackView + Ext.swift in Sources */,
 				9C2C167C296294D200E397D7 /* SceneDelegate.swift in Sources */,
+				9C2C16A32962989A00E397D7 /* UIButton + Ext.swift in Sources */,
+				9C2C16982962969F00E397D7 /* LoginViewController.swift in Sources */,
+				9C2C16A5296298BA00E397D7 /* UIFont + Ext.swift in Sources */,
+				9C2C16A7296298D300E397D7 /* UILabel + Ext.swift in Sources */,
 				9C2C1684296294D200E397D7 /* test_auth.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +271,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9C2C167F296294D200E397D7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C2C1680296294D200E397D7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9C2C1687296294D200E397D7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,10 +405,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SWG4FB8T87;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = test_auth/Info.plist;
+				INFOPLIST_FILE = test_auth/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,10 +432,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SWG4FB8T87;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = test_auth/Info.plist;
+				INFOPLIST_FILE = test_auth/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -362,6 +472,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C2C169E2962972B00E397D7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C2C169F2962972B00E397D7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C2C169E2962972B00E397D7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9C2C1682296294D200E397D7 /* test_auth.xcdatamodeld */ = {
