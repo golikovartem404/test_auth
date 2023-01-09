@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  ResetPasswordViewController.swift
 //  test_auth
 //
 //  Created by User on 02.01.2023.
@@ -7,52 +7,43 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController {
 
     // MARK: - Properties
-
+    
     weak var delegate: AuthenticationNavigtionDelegate?
+    var presenter: ForgotPasswordPresenterProtocol?
 
     // MARK: - Outlets
 
-    let welcomeLabel = UILabel(
-        text: "Hello",
+    let changePasswordLabel = UILabel(
+        text: Locale.changePasswordLabel.string,
         font: .avenir26()
     )
     let emailLabel = UILabel(
-        text: "Email"
+        text: Locale.emailLabel.string
     )
     let emailTextField = OneLineTextField(
         font: .avenir20()
     )
     let passwordLabel = UILabel(
-        text: "Password"
+        text: Locale.newPasswordLabel.string
     )
     let passwordTextField = OneLineTextField(
         font: .avenir20()
     )
     let confirmPasswordLabel = UILabel(
-        text: "Confirm password"
+        text: Locale.confirmPasswordLabel.string
     )
     let confirmPasswordTextField = OneLineTextField(
         font: .avenir20()
     )
-    let alreadyOnboardLabel = UILabel(
-        text: "Already onboard?"
-    )
-    let signUpButton = UIButton(
-        title: "Sign Up",
+    let changePasswordButton = UIButton(
+        title: Locale.buttonChangePasswordTitle.string,
         titleColor: .white,
         backgroundColor: .buttonBlack(),
         cornerRadius: 8
     )
-    let loginButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Login", for: .normal)
-        button.setTitleColor(UIColor.buttonRed(), for: .normal)
-        button.titleLabel?.font = .avenir20()
-        return button
-    }()
     let emailStack = UIStackView(
         axis: .vertical,
         spacing: 0
@@ -73,23 +64,30 @@ class SignUpViewController: UIViewController {
         axis: .horizontal,
         spacing: 15
     )
+    private lazy var blurView = BlurView()
 
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        setupViewController()
         setupHierarchy()
         setupLayout()
-        configureTargets()
         customizeElements()
         setupView()
+        setTargetsForButtons()
     }
 
-    // MARK: - Setups
+    // MARK: - View Setups
+
+    private func setupViewController() {
+        view.backgroundColor = UIColor.mainWhite()
+        presenter = ForgotPasswordPresenter()
+        blurView.isHidden = true
+    }
 
     private func setupHierarchy() {
-        view.addSubview(welcomeLabel)
+        view.addSubview(changePasswordLabel)
         emailStack.addArrangedSubview(emailLabel)
         emailStack.addArrangedSubview(emailTextField)
         passwordStack.addArrangedSubview(passwordLabel)
@@ -99,20 +97,19 @@ class SignUpViewController: UIViewController {
         mainStackView.addArrangedSubview(emailStack)
         mainStackView.addArrangedSubview(passwordStack)
         mainStackView.addArrangedSubview(confirmPasswordStack)
-        mainStackView.addArrangedSubview(signUpButton)
-        bottomStackView.addArrangedSubview(alreadyOnboardLabel)
-        bottomStackView.addArrangedSubview(loginButton)
+        mainStackView.addArrangedSubview(changePasswordButton)
         view.addSubview(mainStackView)
         view.addSubview(bottomStackView)
+        view.addSubview(blurView)
     }
 
     private func setupLayout() {
-        welcomeLabel.snp.makeConstraints { make in
+        changePasswordLabel.snp.makeConstraints { make in
             make.centerX.equalTo(view)
             make.centerY.equalTo(view).multipliedBy(0.35)
         }
 
-        signUpButton.snp.makeConstraints { make in
+        changePasswordButton.snp.makeConstraints { make in
             make.height.equalTo(60)
         }
 
@@ -126,6 +123,10 @@ class SignUpViewController: UIViewController {
             make.centerY.equalTo(view.snp.centerY).multipliedBy(1.6)
             make.leading.equalTo(view.snp.leading).offset(40)
         }
+
+        blurView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 
     private func customizeElements() {
@@ -134,10 +135,7 @@ class SignUpViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
-    }
-
-    private func configureTargets() {
-        loginButton.addTarget(self, action: #selector(loginButtonPressed), for: .touchUpInside)
+        presenter?.delegate = self
     }
 
     private func setupView() {
@@ -145,28 +143,70 @@ class SignUpViewController: UIViewController {
         tapGesture.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tapGesture)
     }
-}
 
-// MARK: - Actions for Buttons Extension
-
-extension SignUpViewController {
-
-    @objc private func loginButtonPressed() {
-        dismiss(animated: true) {
-            self.delegate?.toLoginVC()
-        }
+    private func setTargetsForButtons() {
+        changePasswordButton.addTarget(
+            self,
+            action: #selector(changePasswordButtonPressed),
+            for: .touchUpInside
+        )
     }
 
+    func presentBlurView() {
+        blurView.circleLoader.startAnimating()
+        blurView.isHidden = false
+    }
+}
+
+// MARK: - Objc methods Extension
+
+extension ForgotPasswordViewController {
     @objc private func hideKeyboard() {
         self.view.endEditing(true)
+    }
+
+    @objc func changePasswordButtonPressed() {
+        guard
+            let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let confirmPassword = confirmPasswordTextField.text,
+            password == confirmPassword
+        else {
+            return
+        }
+        presentBlurView()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.presenter?.changePassword(
+                withEmail: email,
+                newPassword: password,
+                andConfirmPassword: confirmPassword
+            )
+            self.blurView.isHidden = true
+            self.blurView.circleLoader.stopAnimating()
+        }
     }
 }
 
 // MARK: - TextField Extension
 
-extension SignUpViewController: UITextFieldDelegate {
+extension ForgotPasswordViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+}
+
+// MARK: - ForgotPasswordViewControllerProtocol Extension
+
+extension ForgotPasswordViewController: ForgotPasswordViewControllerProtocol {
+
+    func showSuccessAlert(withMessage message: String) {
+        showSuccessAlert(withTitle: Locale.successAlertTitle.string, andMessage: message) { _ in
+            self.delegate?.goBackToLoginVC()
+        }
+    }
+
+    func showFailedAlert(withMessage message: String) {
+        showFailedAlert(withTitle: Locale.failedAlertTitle.string, andMessage: message, completion: nil)
     }
 }

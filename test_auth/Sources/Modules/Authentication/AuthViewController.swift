@@ -14,36 +14,30 @@ class AuthenticationViewController: UIViewController {
 
     let signUpViewController = SignUpViewController()
     let loginViewController = LoginViewController()
+    let forgotPasswordViewController = ForgotPasswordViewController()
 
     // MARK: - Outlets
 
     let logoImageView = UIImageView(
-        image: UIImage(named: "logo"),
+        image: Images.logoImage,
         contentMode: .scaleAspectFit
     )
 
-    let emailLabel = UILabel(
-        text: "Sign up with",
+    let signUpLabel = UILabel(
+        text: Locale.signUpLabel.string,
         font: .avenir20()
     )
     let alreadyOnboardLabel = UILabel(
-        text: "Already onboard?",
+        text: Locale.alreadyHaveAccountLabel.string,
         font: .avenir20()
     )
-
-    let googleButton = UIButton(
-        title: "Google",
-        titleColor: .black,
-        backgroundColor: .white,
-        isShadow: true
-    )
     let emailButton = UIButton(
-        title: "Email",
+        title: Locale.emailLabel.string,
         titleColor: .white,
         backgroundColor: .buttonBlack()
     )
     let loginButton = UIButton(
-        title: "Login",
+        title: Locale.loginButtonTitle.string,
         titleColor: .buttonRed(),
         backgroundColor: .mainWhite(),
         isShadow: true
@@ -62,16 +56,21 @@ class AuthenticationViewController: UIViewController {
         setupHierachy()
         setupLayout()
         configureTargetsForButtons()
-        loginViewController.delegate = self
-        signUpViewController.delegate = self
+        setupDelegates()
     }
 
     // MARK: - Setups
 
+    func setupDelegates() {
+        loginViewController.delegate = self
+        signUpViewController.delegate = self
+        forgotPasswordViewController.delegate = self
+    }
+
     func setupHierachy() {
         view.addSubview(logoImageView)
         let email = ButtonView(
-            label: emailLabel,
+            label: signUpLabel,
             button: emailButton
         )
         let alreadyOnboard = ButtonView(
@@ -98,8 +97,16 @@ class AuthenticationViewController: UIViewController {
     }
 
     private func configureTargetsForButtons() {
-        emailButton.addTarget(self, action: #selector(emailButtonPressed), for: .touchUpInside)
-        loginButton.addTarget(self, action: #selector(loginButtonPressed), for: .touchUpInside)
+        emailButton.addTarget(
+            self,
+            action: #selector(emailButtonPressed),
+            for: .touchUpInside
+        )
+        loginButton.addTarget(
+            self,
+            action: #selector(loginButtonPressed),
+            for: .touchUpInside
+        )
     }
 }
 
@@ -125,6 +132,14 @@ extension AuthenticationViewController: AuthenticationNavigtionDelegate {
 
     func toSignUpVC() {
         present(signUpViewController, animated: true)
+    }
+
+    func toForgotPasswordVC() {
+        present(forgotPasswordViewController, animated: true)
+    }
+
+    func goBackToLoginVC() {
+        dismiss(animated: true)
     }
 }
 
