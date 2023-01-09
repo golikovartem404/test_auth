@@ -24,7 +24,7 @@
 		9C2C1689296294D200E397D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2C1687296294D200E397D7 /* LaunchScreen.storyboard */; };
 		9C2C16982962969F00E397D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16972962969F00E397D7 /* LoginViewController.swift */; };
 		9C2C169A296296A900E397D7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C1699296296A900E397D7 /* SignUpViewController.swift */; };
-		9C2C169D296296F700E397D7 /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C169C296296F700E397D7 /* AuthNavigationDelegate.swift */; };
+		9C2C169D296296F700E397D7 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C169C296296F700E397D7 /* Protocols.swift */; };
 		9C2C16A02962972B00E397D7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C2C169F2962972B00E397D7 /* SnapKit */; };
 		9C2C16A32962989A00E397D7 /* UIButton + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16A22962989A00E397D7 /* UIButton + Ext.swift */; };
 		9C2C16A5296298BA00E397D7 /* UIFont + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C16A4296298BA00E397D7 /* UIFont + Ext.swift */; };
@@ -64,7 +64,7 @@
 		9C2C168A296294D200E397D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C2C16972962969F00E397D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9C2C1699296296A900E397D7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		9C2C169C296296F700E397D7 /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
+		9C2C169C296296F700E397D7 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		9C2C16A22962989A00E397D7 /* UIButton + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Ext.swift"; sourceTree = "<group>"; };
 		9C2C16A4296298BA00E397D7 /* UIFont + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Ext.swift"; sourceTree = "<group>"; };
 		9C2C16A6296298D300E397D7 /* UILabel + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Ext.swift"; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		9C2C169B296296E900E397D7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				9C2C169C296296F700E397D7 /* AuthNavigationDelegate.swift */,
+				9C2C169C296296F700E397D7 /* Protocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -377,7 +377,7 @@
 				9C2C16AE2962994B00E397D7 /* UIColor + Ext.swift in Sources */,
 				9C3B07E3296473FF00D072E0 /* LoginPresenter.swift in Sources */,
 				9C3B07E52964742700D072E0 /* SignUpPresenter.swift in Sources */,
-				9C2C169D296296F700E397D7 /* AuthNavigationDelegate.swift in Sources */,
+				9C2C169D296296F700E397D7 /* Protocols.swift in Sources */,
 				9C188D352963384C00603FD1 /* ProfileViewController.swift in Sources */,
 				9C188D77296347EA00603FD1 /* AuthErrors.swift in Sources */,
 				9C2C16B02962999400E397D7 /* ButtonView.swift in Sources */,
