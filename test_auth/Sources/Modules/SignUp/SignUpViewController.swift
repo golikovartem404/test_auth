@@ -75,6 +75,7 @@ class SignUpViewController: UIViewController {
         spacing: 15
     )
     private lazy var blurView = BlurView()
+    private lazy var blurViewSecond = BlurView()
 
     // MARK: - Lifecycle
 
