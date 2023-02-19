@@ -75,6 +75,7 @@ class SignUpViewController: UIViewController {
         spacing: 15
     )
     private lazy var blurView = BlurView()
+    private lazy var blurViewSecond = BlurView()
 
     // MARK: - Lifecycle
 
@@ -113,6 +114,7 @@ class SignUpViewController: UIViewController {
         view.addSubview(mainStackView)
         view.addSubview(bottomStackView)
         view.addSubview(blurView)
+        view.addSubview(blurViewSecond)
     }
 
     private func setupLayout() {
