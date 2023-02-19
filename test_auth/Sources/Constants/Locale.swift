@@ -42,7 +42,7 @@ enum Locale: String {
     case signOutButtonTitle = "Sign Out"
     case signUpButtonTitle = "Sign Up"
     case loginButtonTitle = "Login"
-    case forgotPasswordButtonTitle = "Forgot password"
+    case forgotPasswordButtonTitle = "Forgot password?"
 
     //UserDefaultsKeys
     case isLoggedInKey = "isLoggedIn"
