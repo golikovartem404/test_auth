@@ -9,7 +9,7 @@ import UIKit
 class BlurView: UIView {
 
     let circleLoader: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView(style: .large)
+        let activityIndicator = UIActivityIndicatorView(style: .medium)
         activityIndicator.color = .white
         activityIndicator.hidesWhenStopped = true
         return activityIndicator
