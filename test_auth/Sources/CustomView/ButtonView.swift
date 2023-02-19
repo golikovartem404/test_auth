@@ -22,7 +22,7 @@ class ButtonView: UIView {
         button.snp.makeConstraints { make in
             make.top.equalTo(label.snp.bottom).offset(20)
             make.leading.trailing.equalTo(self)
-            make.height.equalTo(60)
+            make.height.equalTo(70)
         }
 
         self.snp.makeConstraints { make in
