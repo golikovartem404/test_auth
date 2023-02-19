@@ -16,7 +16,7 @@ class OneLineTextField: UITextField {
         self.returnKeyType = .done
 
         let bottomView = UIView()
-        bottomView.frame = CGRect(x: 0, y: 0, width: 2, height: 0)
+        bottomView.frame = CGRect(x: 0, y: 0, width: 3, height: 0)
         bottomView.backgroundColor = .textFieldBorder()
         self.addSubview(bottomView)
 
