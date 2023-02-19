@@ -114,6 +114,7 @@ class SignUpViewController: UIViewController {
         view.addSubview(mainStackView)
         view.addSubview(bottomStackView)
         view.addSubview(blurView)
+        view.addSubview(blurViewSecond)
     }
 
     private func setupLayout() {
